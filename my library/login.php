@@ -12,7 +12,7 @@
       height:900px;
     }
 
-    .register-form {
+    .rer-form {
       background: white;
       padding: 30px;
       border-radius: 10px;
