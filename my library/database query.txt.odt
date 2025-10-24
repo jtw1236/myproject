@@ -14,7 +14,7 @@ CREATE TABLE users (
 
 
  CREATE TABLE books (
-        id INT AUTO_INCREMENT PRIMARY KEY,
+       MENT PRIMARY KEY,
         author_id INT,
         title VARHAR(255) NOT NULL,
         description TEXT,
