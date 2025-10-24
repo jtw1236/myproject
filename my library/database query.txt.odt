@@ -1,0 +1,25 @@
+CREATE DATABASE library COLLATE utf8_general_ci;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) UNIQUE,
+    password VARCHAR(255));
+
+
+
+ CREATE TABLE authors (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL UNIQUE
+    );
+
+
+ CREATE TABLE books (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        author_id INT,
+        title VARCHAR(255) NOT NULL,
+        description TEXT,
+        pages_count INT,
+        book_type VARCHAR(255),
+        in_stock TINYINT(1) DEFAULT 0,
+        FOREIGN KEY (author_id) REFERENCES authors(id) ON DELETE CASCADE
+    ) ;
